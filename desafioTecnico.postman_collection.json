@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "c8c07fe2-5366-4cda-8322-0f9393e9bf0e",
+		"name": "desafioTecnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18811794"
+	},
+	"item": [
+		{
+			"name": "Repositorio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json()",
+							"",
+							"pm.test(\"Status de resposta\", function () {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"pm.test(\"id é = \" + response.id, function () {",
+							"    pm.expect(response.id).to.not.be.null",
+							"    pm.expect(response.id).to.not.be.undefined",
+							"})",
+							"",
+							"pm.test(\"name é = \" + response.name, function () {",
+							"    pm.expect(response.name).to.not.be.null",
+							"    pm.expect(response.name).to.not.be.undefined",
+							"})",
+							"",
+							"pm.test(\"private é = \" + response.private, function () {",
+							"    pm.expect(response.private).to.not.be.null",
+							"    pm.expect(response.private).to.not.be.undefined",
+							"    pm.expect(response.private).to.be.false",
+							"})",
+							"",
+							"pm.test(\"login é = \" + response.owner.login, function () {",
+							"    pm.expect(response.owner.login).to.not.be.null",
+							"    pm.expect(response.owner.login).to.not.be.undefined",
+							"})",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}Daniboy96/DesafioTecnico",
+					"host": [
+						"{{url}}Daniboy96"
+					],
+					"path": [
+						"DesafioTecnico"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
