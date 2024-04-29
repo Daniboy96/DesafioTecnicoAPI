@@ -14,8 +14,6 @@ Newman
 ## Pré-requisito
 Postman instalado
 
-Instalar
-
 Clone o repositório.
 
 Importe a collection e o environment no Postman.
