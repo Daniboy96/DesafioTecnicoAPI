@@ -8,6 +8,7 @@ Este repositório também está configurado para executar a automação como par
 
 ## Tecnologias utilizadas
 Postman
+
 Newman
 
 ## Pré-requisito
